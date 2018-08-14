@@ -39,6 +39,11 @@
             background-attachment: fixed;
             background-position: center;
         }
+        
+        .headTitle {
+            margin-left:40%;
+            color:white;
+        }
 
         @media (max-width:1500px){
             .marginPush { 
@@ -46,6 +51,20 @@
             margin-left:10px;
             margin-right:10px;
             margin-bottom:20px;}
+        }
+        
+        @media (max-width:500px){
+            .marginPush { 
+                margin-top:0px;
+                margin-left:0px;
+                margin-right:0px;
+                margin-bottom:0px;
+            }
+            
+            .headTitle {
+                margin-left:10%;
+                color:white;
+            }
         }
         
         .skillbar {
@@ -128,13 +147,13 @@
 	<!--<div class="row" style=" margin-top:auto; margin-left:auto; margin-right:auto; margin-bottom:auto;">
 		<div class="col-md-12">-->
 			<div class="jumbotron img-responsive" style="margin-top:auto; margin-left:-10%; margin-right:-10%; margin-bottom:auto;">
-				<h1 style="margin-left:40%; color:white;">
+				<h1 class="headTitle">
 					Kurt Burgess
 				</h1>
-				<h3 style="margin-left:40%; color:white;">
+				<h3 class="headTitle">
 					Software Engineering | AI | Cyber Security
                 </h3>
-				<p style="margin-left:40%; color:white;">
+				<p class="headTitle">
 					<a class="btn btn-primary btn-large" href="cv.pdf">Check out my CV</a>
 				</p>
 			</div>
