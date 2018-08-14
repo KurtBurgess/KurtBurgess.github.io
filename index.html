@@ -20,6 +20,13 @@
     margin-left:30px;
     margin-right:30px;
     margin-bottom:20px;}
+    .img-responsive {
+    background: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
     </style>
   </head>
   <body>
@@ -27,15 +34,15 @@
 <div class="container-fluid marginPush">
 	<div class="row" style=" margin-top:-20px; margin-left:-60px; margin-right:-60px; margin-bottom:-20px;">
 		<div class="col-md-12">
-			<div class="jumbotron conimg">
-				<h2>
+			<div class="jumbotron img-responsive">
+				<h1 style="margin-left:40%; color:white;">
 					Kurt Burgess
-				</h2>
-				<p>
+				</h1>
+				<h3 style="margin-left:40%; color:white;">
 					Software Engineering | AI | Cyber Security
-                </p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+                </h3>
+				<p style="margin-left:40%; color:white;">
+					<a class="btn btn-primary btn-large" href="cv.pdf">Check out my CV</a>
 				</p>
 			</div>
 		</div>
@@ -78,10 +85,26 @@ effectively and steering the project to completion. All whilst being exposed to 
 			<p>
 				<a class="btn" href="#">View details »</a>
 			</p>
+            
+            
+            <button type="button" class="btn btn-primary">
+  Notifications <span class="badge badge-secondary">New</span>
+</button>
+
+<div class="skillbar clearfix " data-percent="20%">
+	<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+	<div class="skillbar-bar" style="background: #e67e22;"></div>
+	<div class="skill-bar-percent">20%</div>
+</div> <!-- End Skill Bar -->
+
+
+<button type="button" class="btn btn-outline-primary">Primary</button>
+
+
 			<div class="progress">
 				<div class="progress-bar w-75 progress-bar-striped progress-bar-animated">
 				</div>
-			</div>
+			</div></br>
 			<div class="progress">
 				<div class="progress-bar w-75 progress-bar-striped progress-bar-animated">
 				</div>
