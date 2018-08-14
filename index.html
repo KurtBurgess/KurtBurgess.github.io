@@ -13,93 +13,113 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    jQuery(document).ready(function(){
+        jQuery('.skillbar').each(function(){
+            jQuery(this).find('.skillbar-bar').animate({
+                width:jQuery(this).attr('data-percent')
+            },6000);
+        });
+    });
+    </script>
+    
     <style>
-    .marginPush { 
-    margin-top:20px;
-    margin-left:30px;
-    margin-right:30px;
-    margin-bottom:20px;}
-    .img-responsive {
-    background: url(bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-}
+        .marginPush { 
+            margin-top:20px;
+            margin-left:30px;
+            margin-right:30px;
+            margin-bottom:20px;
+        }
+        
+        .img-responsive {
+            background: url(bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center; 
+        }
 
-.skillbar {
-	position:relative;
-	display:block;
-	margin-bottom:15px;
-	width:100%;
-	background:#eee;
-	height:35px;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	-webkit-transition:0.4s linear;
-	-moz-transition:0.4s linear;
-	-ms-transition:0.4s linear;
-	-o-transition:0.4s linear;
-	transition:0.4s linear;
-	-webkit-transition-property:width, background-color;
-	-moz-transition-property:width, background-color;
-	-ms-transition-property:width, background-color;
-	-o-transition-property:width, background-color;
-	transition-property:width, background-color;
-}
+        @media (max-width:1500px){
+            .marginPush { 
+            margin-top:20px;
+            margin-left:10px;
+            margin-right:10px;
+            margin-bottom:20px;}
+        }
+        
+        .skillbar {
+            position:relative;
+            display:block;
+            margin-bottom:15px;
+            width:100%;
+            background:#eee;
+            height:35px;
+            border-radius:3px;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+            -webkit-transition:0.4s linear;
+            -moz-transition:0.4s linear;
+            -ms-transition:0.4s linear;
+            -o-transition:0.4s linear;
+            transition:0.4s linear;
+            -webkit-transition-property:width, background-color;
+            -moz-transition-property:width, background-color;
+            -ms-transition-property:width, background-color;
+            -o-transition-property:width, background-color;
+            transition-property:width, background-color;
+        }
 
-.skillbar-title {
-	position:absolute;
-	top:0;
-	left:0;
-width:110px;
-	font-weight:bold;
-	font-size:13px;
-	color:#ffffff;
-	background:#6adcfa;
-	-webkit-border-top-left-radius:3px;
-	-webkit-border-bottom-left-radius:4px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-bottomleft:3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
-}
+        .skillbar-title {
+            position:absolute;
+            top:0;
+            left:0;
+            width:110px;
+            font-weight:bold;
+            font-size:13px;
+            color:#ffffff;
+            background:#6adcfa;
+            -webkit-border-top-left-radius:3px;
+            -webkit-border-bottom-left-radius:4px;
+            -moz-border-radius-topleft:3px;
+            -moz-border-radius-bottomleft:3px;
+            border-top-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
 
-.skillbar-title span {
-	display:block;
-	background:rgba(0, 0, 0, 0.1);
-	padding:0 20px;
-	height:35px;
-	line-height:35px;
-	-webkit-border-top-left-radius:3px;
-	-webkit-border-bottom-left-radius:3px;
-	-moz-border-radius-topleft:3px;
-	-moz-border-radius-bottomleft:3px;
-	border-top-left-radius:3px;
-	border-bottom-left-radius:3px;
-}
+        .skillbar-title span {
+            display:block;
+            background:rgba(0, 0, 0, 0.1);
+            padding:0 20px;
+            height:35px;
+            line-height:35px;
+            -webkit-border-top-left-radius:3px;
+            -webkit-border-bottom-left-radius:3px;
+            -moz-border-radius-topleft:3px;
+            -moz-border-radius-bottomleft:3px;
+            border-top-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
 
-.skillbar-bar {
-	height:35px;
-	width:0px;
-	background:#6adcfa;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-}
+        .skillbar-bar {
+            height:35px;
+            width:0px;
+            background:#6adcfa;
+            border-radius:3px;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+        }
 
-.skill-bar-percent {
-	position:absolute;
-	right:10px;
-	top:0;
-	font-size:11px;
-	height:35px;
-	line-height:35px;
-	color:#ffffff;
-	color:rgba(0, 0, 0, 0.4);
-}
+        .skill-bar-percent {
+            position:absolute;
+            right:10px;
+            top:0;
+            font-size:11px;
+            height:35px;
+            line-height:35px;
+            color:#ffffff;
+            color:rgba(0, 0, 0, 0.4);
+        }
     </style>
   </head>
   <body>
@@ -125,10 +145,10 @@ width:110px;
 			<p>
 				<table style="width:100%; text-align:center">
                     <tr>
-                        <td><a href=""><i class="fas fa-envelope-square fa-3x"></i></a></td>
-                        <td><a href=""><i class="fab fa-linkedin fa-3x"></i></a></td>
-                        <td><a href=""><i class="fab fa-twitter-square fa-3x"></i></a></td>
-                        <td><a href=""><i class="fab fa-github-square fa-3x"></i></a></td>
+                        <td><a href="mailto:ktbsupremo@gmail.com"><i class="fas fa-envelope-square fa-3x"></i></a></td>
+                        <td><a href="http://uk.linkedin.com/in/KurtBurgess"><i class="fab fa-linkedin fa-3x"></i></a></td>
+                        <td><a href="https://twitter.com/ktbsupremo"><i class="fab fa-twitter-square fa-3x"></i></a></td>
+                        <td><a href="https://github.com/KurtBurgess"><i class="fab fa-github-square fa-3x"></i></a></td>
                     </tr>
                 </table>
 			</p>
@@ -158,30 +178,49 @@ effectively and steering the project to completion. All whilst being exposed to 
 			<p>
 				<a class="btn" href="#">View details »</a>
 			</p>
-            
-            
-            <button type="button" class="btn btn-primary">
-  Notifications <span class="badge badge-secondary">New</span>
-</button>
 
-<div class="skillbar clearfix " data-percent="20%">
-	<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+
+<div class="skillbar clearfix " data-percent="80%">
+	<div class="skillbar-title" style="background: #d35400;"><span>Python</span></div>
 	<div class="skillbar-bar" style="background: #e67e22;"></div>
-	<div class="skill-bar-percent">20%</div>
+	<div class="skill-bar-percent">80%</div>
 </div> <!-- End Skill Bar -->
 
+<div class="skillbar clearfix " data-percent="75%">
+	<div class="skillbar-title" style="background: #2980b9;"><span>Java</span></div>
+	<div class="skillbar-bar" style="background: #3498db;"></div>
+	<div class="skill-bar-percent">75%</div>
+</div> <!-- End Skill Bar -->
 
-<button type="button" class="btn btn-outline-primary">Primary</button>
+<div class="skillbar clearfix " data-percent="60%">
+	<div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
+	<div class="skillbar-bar" style="background: #5a68a5;"></div>
+	<div class="skill-bar-percent">60%</div>
+</div> <!-- End Skill Bar -->
 
+<div class="skillbar clearfix " data-percent="50%">
+	<div class="skillbar-title" style="background: #2c3e50;"><span>C++</span></div>
+	<div class="skillbar-bar" style="background: #2c3e50;"></div>
+	<div class="skill-bar-percent">50%</div>
+</div> <!-- End Skill Bar -->
 
-			<div class="progress">
-				<div class="progress-bar w-75 progress-bar-striped progress-bar-animated">
-				</div>
-			</div></br>
-			<div class="progress">
-				<div class="progress-bar w-75 progress-bar-striped progress-bar-animated">
-				</div>
-			</div>
+<div class="skillbar clearfix " data-percent="75%">
+	<div class="skillbar-title" style="background: #333333;"><span>Agile Methodology</span></div>
+	<div class="skillbar-bar" style="background: #525252;"></div>
+	<div class="skill-bar-percent">75%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="60%">
+	<div class="skillbar-title" style="background: #27ae60;"><span>Extreme</span></div>
+	<div class="skillbar-bar" style="background: #2ecc71;"></div>
+	<div class="skill-bar-percent">60%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="70%">
+	<div class="skillbar-title" style="background: #124e8c;"><span>Git / Svn</span></div>
+	<div class="skillbar-bar" style="background: #4288d0;"></div>
+	<div class="skill-bar-percent">70%</div>
+</div> <!-- End Skill Bar -->
 		</div>
 	</div>
 	<!--<div class="row">
